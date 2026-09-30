@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class ComparacionPromedios {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        // Solicitar los promedios
+        System.out.print("Ingrese el promedio del estudiante 1: ");
+        double promedio1 = entrada.nextDouble();
+
+        System.out.print("Ingrese el promedio del estudiante 2: ");
+        double promedio2 = entrada.nextDouble();
+
+        // Comparaciones relacionales
+        System.out.println("\n--- Comparaciones relacionales ---");
+        System.out.println("¿Promedio 1 > Promedio 2?  " + (promedio1 > promedio2));
+        System.out.println("¿Promedio 1 < Promedio 2?  " + (promedio1 < promedio2));
+        System.out.println("¿Promedio 1 >= Promedio 2? " + (promedio1 >= promedio2));
+        System.out.println("¿Promedio 1 <= Promedio 2? " + (promedio1 <= promedio2));
+        System.out.println("¿Promedio 1 == Promedio 2? " + (promedio1 == promedio2));
+        System.out.println("¿Promedio 1 != Promedio 2? " + (promedio1 != promedio2));
+
+        // Determinar el mejor rendimiento y calcular la diferencia
+        double diferencia = Math.abs(promedio1 - promedio2);
+
+        System.out.println("\n--- Resultado ---");
+
+        if (promedio1 > promedio2) {
+            System.out.println("El estudiante 1 obtuvo el mejor rendimiento.");
+        } else if (promedio2 > promedio1) {
+            System.out.println("El estudiante 2 obtuvo el mejor rendimiento.");
+        } else {
+            System.out.println("Ambos estudiantes obtuvieron el mismo rendimiento.");
+        }
+
+        System.out.println("La diferencia entre los promedios es: " + diferencia);
+
+        entrada.close();
+    }
+}
