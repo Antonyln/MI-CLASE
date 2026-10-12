@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class ProduccionFabrica {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int piezas;
+        double importe, incentivo, total;
+        double precioPieza = 5;
+
+        System.out.print("Ingrese la cantidad de piezas producidas: ");
+        piezas = entrada.nextInt();
+
+        importe = piezas * precioPieza;
+
+        if (piezas > 1000) {
+            incentivo = importe * 0.15;
+        } else {
+            incentivo = importe * 0.08;
+        }
+
+        total = importe + incentivo;
+
+        System.out.println("Importe: S/ " + importe);
+        System.out.println("Incentivo: S/ " + incentivo);
+        System.out.println("Total con incentivo: S/ " + total);
+
+        entrada.close();
+    }
+}

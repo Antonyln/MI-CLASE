@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class TarifaTaxi {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        double kilometros, total;
+
+        System.out.print("Ingrese los kilometros recorridos: ");
+        kilometros = entrada.nextDouble();
+
+        if (kilometros <= 3) {
+            total = 8;
+        } else {
+            total = 8 + (kilometros - 3) * 2.50;
+        }
+
+        System.out.println("Total a pagar: S/ " + total);
+
+        entrada.close();
+    }
+}

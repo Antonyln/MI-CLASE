@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class CalculoSalario {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        double pagoHora = 20;
+        int horasTrabajadas;
+        double salario;
+
+        System.out.print("Ingrese las horas trabajadas: ");
+        horasTrabajadas = entrada.nextInt();
+
+        if (horasTrabajadas <= 40) {
+            salario = horasTrabajadas * pagoHora;
+        } else {
+            salario = (40 * pagoHora)
+                    + ((horasTrabajadas - 40) * pagoHora * 2);
+        }
+
+        System.out.println("El salario total es: S/ " + salario);
+
+        entrada.close();
+    }
+}
